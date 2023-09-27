@@ -42,13 +42,13 @@
 
 <img src="notes/15.gif" >
 
-| Technology    | Description     |
-| ------------- | --------------- |
-| `Language`    | html, css       |
-| `Framework`   | -               |
-| `Library`     | -               |
-| `Text editor` | Vs code         |
-| `Browser`     | Chrome, firefox |
+| Technology    | Description                                                      |
+| ------------- | ---------------------------------------------------------------- |
+| `Language`    | html, css                                                        |
+| `Framework`   | -                                                                |
+| `Library`     | -                                                                |
+| `Text editor` | Vs code, [Codepen](https://codepen.io/joysmithpeter/pen/NWeMEZQ) |
+| `Browser`     | Chrome, firefox                                                  |
 
 ---
 
