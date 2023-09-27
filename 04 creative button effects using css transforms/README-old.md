@@ -34,20 +34,6 @@
 
 ---
 
-- In index.html
-
-```html
-
-```
-
----
-
-- In style.css
-
-```css
-
-```
-
 <br>
 
 ### 15. creative rotating button effect<a id="15"></a>
@@ -69,7 +55,21 @@
 - In index.html
 
 ```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS animatin, transitions and transforms</title>
 
+    <!-- OUR STYLESHEET -->
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  </head>
+
+  <body>
+    <a href="#">Hover Me</a>
+  </body>
+</html>
 ```
 
 ---
@@ -77,7 +77,41 @@
 - In style.css
 
 ```css
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+a {
+  text-decoration: none;
+  color: #262626;
+  font-family: sans-serif;
+  font-size: 45px;
+  border: 5px solid #262626;
+  padding: 40px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff200;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  transition: transform 1s;
+}
+
+a:hover:before {
+  transform: rotate(0deg);
+}
 ```
 
 <br>
