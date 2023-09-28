@@ -22,15 +22,13 @@
 
 > **_Business Objective: Layout_**
 
-<img src="notes/14.gif" >
-
-| Technology    | Description     |
-| ------------- | --------------- |
-| `Language`    | html, css       |
-| `Framework`   | -               |
-| `Library`     | -               |
-| `Text editor` | Vs code         |
-| `Browser`     | Chrome, firefox |
+| Technology    | Description       |
+| ------------- | ----------------- |
+| `Language`    | html, css         |
+| `Framework`   | -                 |
+| `Library`     | -                 |
+| `Text editor` | Vs code, code pen |
+| `Browser`     | Chrome, firefox   |
 
 ---
 
@@ -60,13 +58,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">Hover Me</a>
   </body>
 </html>
@@ -77,26 +83,41 @@
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /*, horizontally & */
   justify-content: center;
+  /* vertically */
   align-items: center;
 }
 
+/* 3️⃣ */
 a {
+  /* remove underline */
   text-decoration: none;
   color: #262626;
   font-family: sans-serif;
   font-size: 45px;
   border: 5px solid #262626;
+  /* t/b, l/r */
   padding: 40px 80px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
+  /* hide the yellow background outside the content i.e link */
   overflow: hidden;
 }
 
+/* 4️⃣ */
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   left: 0;
   top: 0;
@@ -104,11 +125,14 @@ a:before {
   height: 100%;
   width: 100%;
   z-index: -1;
+  /* set the pivot point bottom left corner */
   transform-origin: bottom left;
+  /* rotate the div -90 degree */
   transform: rotate(-90deg);
   transition: transform 1s;
 }
 
+/* 5️⃣ change rotational degree to 0*/
 a:hover:before {
   transform: rotate(0deg);
 }
@@ -140,13 +164,21 @@ a:hover:before {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">Hover Me</a>
   </body>
 </html>
@@ -157,40 +189,65 @@ a:hover:before {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
 }
 
+/* 3️⃣ */
 a {
+  /* remove underline */
   text-decoration: none;
-  color: #262626;
+  color: #351435;
   font-family: sans-serif;
-  font-size: 45px;
-  border: 5px solid #262626;
+  font-size: 40px;
+  border: 3px solid #351435;
+  /* t/b, l/r */
   padding: 40px 80px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
+  transition: all 1s;
+
+  /* hiding the background i.e pseudo element outside  the content i.e link */
   overflow: hidden;
 }
 
+/* 4️⃣ */
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #fff200;
+
   height: 100%;
   width: 100%;
+  background-color: #351435;
   z-index: -1;
-  transform-origin: bottom left;
-  transform: rotate(-90deg);
-  transition: transform 1s;
+
+  transform: translateY(-100%);
+  transition: all 1s;
 }
 
+/* 5️⃣ change translationY axis  0*/
 a:hover:before {
-  transform: rotate(0deg);
+  transform: translateY(0);
+}
+
+/* 6️⃣ */
+a:hover {
+  /* change text color */
+  color: white;
 }
 ```
 
@@ -220,13 +277,21 @@ a:hover:before {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">hover me</a>
   </body>
 </html>
@@ -237,61 +302,88 @@ a:hover:before {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
-  align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
+  align-items: center;
 }
 
+/* 3️⃣ */
 a {
-  padding: 40px 80px;
-  font-family: sans-serif;
+  /* remove underline */
   text-decoration: none;
   color: #262626;
+  font-family: sans-serif;
   font-size: 45px;
+  /* t/b, l/r */
+  padding: 40px 80px;
   letter-spacing: 2px;
   border: 5px solid #262626;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   transition: 1s;
 }
 
+/* 4️⃣ */
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
   background-color: #262626;
-  transition: 1s;
+  z-index: -1;
+
+  /* rotate pseudo element X-axis 90 degree */
   transform: rotateX(90deg);
-  z-index: -1;
-}
-
-a:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #262626;
   transition: 1s;
-  transform: rotateY(90deg);
-  z-index: -1;
 }
 
+/* 5️⃣ reset X-axis rotation*/
 a:hover:before {
   transform: rotateX(0);
 }
 
-a:hover:after {
-  transform: rotateY(0);
-}
-
+/* 6️⃣ */
 a:hover {
   color: white;
+}
+
+/* 7️⃣ */
+a:after {
+  content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  z-index: -1;
+
+  transition: 1s;
+  /* rotate Y 90 pseudo element */
+  transform: rotateY(90deg);
+}
+
+/* 8️⃣ reset Y-axis rotation */
+a:hover:after {
+  transform: rotateY(0);
 }
 ```
 
@@ -321,19 +413,29 @@ a:hover {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
-    <!-- GOOGLE FONTS -->
-    <link
+    <!-- 🅰️ GOOGLE FONTS -->
+    <content
+      i.e
+      link
       href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,900"
       rel="stylesheet"
     />
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">button</a>
   </body>
 </html>
@@ -344,29 +446,41 @@ a:hover {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically */
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
 }
 
+/* 3️⃣ */
 a {
+  /* remove line */
   text-decoration: none;
-  padding: 40px 80px;
   color: #e1332d;
-  border: 3px solid #e1332d;
-  text-transform: uppercase;
-  font-size: 40px;
   font-family: "roboto";
+  font-size: 40px;
+  border: 3px solid #e1332d;
+  /* t/b, l/r */
+  padding: 40px 80px;
+  text-transform: uppercase;
+  /* letters will be lighter */
   font-weight: 300;
+  /* letters will be closing to each other */
   letter-spacing: -2px;
   transition: all 0.5s;
 }
 
+/* 4️⃣ changes*/
 a:hover {
+  /* letter will be bold */
   font-weight: 900;
+  /* letter will be little far away from each other */
   letter-spacing: 10px;
+  /*  */
   border: 7px solid #e1332d;
 }
 ```
@@ -397,13 +511,21 @@ a:hover {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">Hover Me</a>
   </body>
 </html>
@@ -414,42 +536,65 @@ a:hover {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   background-color: #222;
 }
 
+/* 3️⃣ */
 a {
+  /* remove underline */
   text-decoration: none;
   color: white;
   font-family: sans-serif;
   font-size: 40px;
   border: 3px solid white;
+  /* t/b, l/r */
   padding: 40px 80px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
+
   transition: all 1s;
+  /* hide the background i.e pseudo outside the link */
   overflow: hidden;
 }
 
+/* 4️⃣ */
 a:before {
   content: "YEAH!";
   color: white;
-  background-color: #f44336;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   left: 0;
   top: 0;
+
   height: 100%;
   width: 100%;
+  background-color: #f44336;
+
   transform: translateY(-100%);
   transition: all 0.5s;
+
+  /* center the "YEAH"-content using flex box */
+  display: flex;
+  /* horizontal */
+  justify-content: center;
+  /* vertical */
+  align-items: center;
 }
 
+/* 5️⃣ reset */
 a:hover:before {
   transform: translateY(0);
 }
@@ -481,13 +626,21 @@ a:hover:before {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">Hover Me</a>
   </body>
 </html>
@@ -498,42 +651,61 @@ a:hover:before {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   background-color: #222;
 }
 
+/* 3️⃣ */
 a {
+  /* remove underline */
   text-decoration: none;
   color: white;
   font-family: sans-serif;
   font-size: 40px;
   border: 3px solid white;
+  /* t/b, l/r */
   padding: 40px 80px;
   transition: all 0.3s;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
+/* 4️⃣ */
 a:hover {
   background-color: #f44336;
 }
 
+/* 5️⃣ */
 a:before {
   content: "";
-  background-color: white;
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+
   height: 50px;
-  position: absolute;
+  width: 100%;
+  background-color: white;
+
+  /* translate pseudo element outside the link from X-axis, Rotate 45 deg from X-axis */
   transform: translateX(-100%) rotate(45deg);
   transition: all 0.3s;
 }
 
+/* 6️⃣ */
 a:hover:before {
   transform: translateX(100%) rotate(45deg);
 }
@@ -565,13 +737,21 @@ a:hover:before {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">Hover Me</a>
   </body>
 </html>
@@ -582,60 +762,94 @@ a:hover:before {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
 }
 
+/* 3️⃣ */
 a {
+  /* remove underline */
   text-decoration: none;
+  color: transparent;
   background-color: #262626;
   font-family: sans-serif;
   font-size: 40px;
   border: 4px solid #262626;
+  /* t/b, l/r */
   padding: 40px 80px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
-  color: transparent;
+
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
+/* 4️⃣ */
 a:before {
   content: "Hover Me";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
+
   height: 100%;
   width: 100%;
   background-color: #fffa65;
   color: #262626;
+
+  /* center the content using flex box */
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
+
   transition: all 0.5s;
 }
 
+/* 5️⃣ */
 a:after {
   content: "Hover Me";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
+
   height: 100%;
   width: 100%;
   background-color: #fffa65;
   color: #262626;
+
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
+
   transition: all 0.5s;
+  /* move to bottom-left */
   transform: translate(-100%, 100%);
 }
 
+/* 6️⃣ */
 a:hover:before {
   transform: translate(100%, -100%);
 }
 
+/* 7️⃣ */
 a:hover:after {
   transform: translate(0, 0);
 }
@@ -667,13 +881,21 @@ a:hover:after {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">Hover Me</a>
   </body>
 </html>
@@ -684,42 +906,65 @@ a:hover:after {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
 }
 
+/* 3️⃣ */
 a {
+  /* remove underline */
   text-decoration: none;
   color: #262626;
   font-family: sans-serif;
   font-size: 40px;
   border: 3px solid #262626;
+  /* t/b, l/r */
   padding: 40px 80px;
-  transition: all 0.5s;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
+
+  transition: all 0.5s;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
+/* 4️⃣ */
 a:before {
   content: "Hover me";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
+
   height: 100%;
   width: 100%;
   background-color: #262626;
   color: white;
+
+  /* center the content i.e "Hover me", inside pseudo element */
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
+
   transform: scale(5);
   opacity: 0;
   transition: all 0.5s;
 }
 
+/* 5️⃣ */
 a:hover:before {
   transform: scale(1);
   opacity: 1;
@@ -752,13 +997,22 @@ a:hover:before {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
 
     <!-- FONT ِAWESOME -->
-    <link
+    <content
+      i.e
+      link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
       integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
@@ -767,6 +1021,7 @@ a:hover:before {
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <button class="btn">button</button>
   </body>
 </html>
@@ -777,47 +1032,67 @@ a:hover:before {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   font-family: sans-serif;
 }
 
+/* 3️⃣ */
 .btn {
   border: 2px solid tomato;
   background: none;
   color: tomato;
+  /* t/b, l/r */
   padding: 20px 40px;
   font-size: 25px;
   text-transform: uppercase;
+  /* to convert cursor into hand */
   cursor: pointer;
   transition: all 0.5s;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   color: tomato;
+  /* hiding the background i.e pseudo element outside the btn */
   overflow: hidden;
 }
 
+/* 6️⃣ */
 .btn:hover {
   color: white;
 }
 
+/* 4️⃣ */
 .btn:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   bottom: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
   background: tomato;
   z-index: -1;
+
+  /* setup curves */
   border-radius: 50% 50% 0% 0%;
   height: 0%;
   transition: all 0.5s;
 }
 
+/* 5️⃣ */
 .btn:hover:before {
   height: 190%;
 }
@@ -849,13 +1124,21 @@ body {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">Button</a>
   </body>
 </html>
@@ -866,45 +1149,68 @@ body {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   font-family: sans-serif;
   background-color: #212121;
 }
 
+/* 3️⃣ */
 a {
-  padding: 20px 40px;
-  text-transform: uppercase;
   text-decoration: none;
   background-color: #f1c40f;
   color: white;
   font-size: 20px;
+  /*  t/b, l/r */
+  padding: 20px 40px;
+  text-transform: uppercase;
   letter-spacing: 2px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
 }
 
+/* 3️⃣ green background */
 a:before {
   content: "BUTTON";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
   background-color: #2ecc71;
+
+  /* center the pseudo element content i.e "BUTTON" */
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
+
   transform: rotateX(270deg);
   transform-origin: top;
   transition: all 0.5s;
 }
 
+/* 5️⃣ red background */
 a:after {
   content: "BUTTON";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
@@ -912,7 +1218,9 @@ a:after {
   height: 100%;
   background-color: red;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   transform-origin: bottom;
   transform: rotateX(270deg);
@@ -920,6 +1228,7 @@ a:after {
   transition-delay: 0.25s;
 }
 
+/* 4️⃣ */
 a:hover:before,
 a:hover:after {
   transform: rotateX(0deg);
@@ -952,13 +1261,22 @@ a:hover:after {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
 
     <!-- FONT ِAWESOME -->
-    <link
+    <content
+      i.e
+      link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
       integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
@@ -977,11 +1295,14 @@ a:hover:after {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   font-family: sans-serif;
   background-color: grey;
@@ -995,11 +1316,18 @@ a {
   color: transparent;
   border: 3px solid #ff0;
   font-size: 30px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
 }
 
 a:before {
   content: "button";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
@@ -1008,7 +1336,9 @@ a:before {
   background-color: #363636;
   color: #ff0;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   transition: all 0.5s;
 }
@@ -1021,6 +1351,9 @@ a:hover:before {
 
 a:after {
   content: "button";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: -100%;
@@ -1029,7 +1362,9 @@ a:after {
   background-color: #363636;
   color: #ff0;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   transition: all 0.5s;
   transform: scale(0) rotateY(0deg);
@@ -1069,13 +1404,22 @@ a:hover:after {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
 
     <!-- FONT ِAWESOME -->
-    <link
+    <content
+      i.e
+      link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
       integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
@@ -1094,11 +1438,14 @@ a:hover:after {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   font-family: verdana;
   background-color: #272727;
@@ -1115,12 +1462,19 @@ a {
   text-align: center;
   line-height: 80px;
   transition: all 0.5s;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
 }
 
 a:before,
 a:after {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 50%;
   width: 20px;
@@ -1157,7 +1511,9 @@ a:hover:after {
   opacity: 1;
 }
 
-span {
+s
+  /* 🧒  Children property;panof parent a-tag, which is set as relative {
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
@@ -1207,13 +1563,22 @@ a:hover {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
 
     <!-- FONT ِAWESOME -->
-    <link
+    <content
+      i.e
+      link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
       integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
@@ -1232,11 +1597,14 @@ a:hover {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   font-family: verdana;
 }
@@ -1251,6 +1619,10 @@ a {
   line-height: 60px;
   font-weight: bold;
   letter-spacing: 2px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   transition: all 0.2s;
   color: white;
@@ -1258,6 +1630,9 @@ a {
 
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: -3px;
   left: -3px;
@@ -1278,6 +1653,9 @@ a:hover:before {
 
 a:after {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 3px;
   left: 3px;
@@ -1327,13 +1705,22 @@ a:hover {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
 
     <!-- FONT ِAWESOME -->
-    <link
+    <content
+      i.e
+      link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
       integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
@@ -1352,11 +1739,14 @@ a:hover {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   background-color: #222;
 }
@@ -1369,9 +1759,15 @@ a {
   color: #f6b93b;
   letter-spacing: 3px;
   padding: 25px 50px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   border: 3px solid #f6b93b;
   transition: all 0.2s;
+  transition: all 0.2s;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
@@ -1380,6 +1776,9 @@ a:after,
 span:before,
 span:after {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   width: 25%;
   height: 100%;
@@ -1462,13 +1861,21 @@ a:hover {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">hover me</a>
   </body>
 </html>
@@ -1479,11 +1886,14 @@ a:hover {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   background-color: #212121;
 }
@@ -1499,11 +1909,18 @@ a {
   line-height: 60px;
   text-align: center;
   color: #fdc518;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
 }
 
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   height: 90px;
   width: 200px;
@@ -1516,6 +1933,9 @@ a:before {
 
 a:after {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   height: 60px;
   width: 230px;
@@ -1562,10 +1982,10 @@ a:hover:after {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <content i.e link rel="stylesheet" href="style.css" type="text/css" media="all">
 
 </head>
 
@@ -1587,12 +2007,15 @@ a:hover:after {
 ```css
 @import url(https://fonts.googleapis.com/css?family=BenchNine:700);
 
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   height: 100vh;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   background-color: #272727;
 }
 
@@ -1605,11 +2028,18 @@ button {
   font-size: 22px;
   text-transform: uppercase;
   cursor: pointer;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
 }
 
 button:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   width: 24px;
   height: 24px;
@@ -1628,6 +2058,9 @@ button:hover:after {
 
 button:after {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   width: 24px;
   height: 24px;
@@ -1697,10 +2130,17 @@ button:after {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
@@ -1714,12 +2154,17 @@ button:after {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   font-family: sans-serif;
+  font-family: sans-serif;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
@@ -1732,6 +2177,10 @@ a {
   text-align: center;
   line-height: 60px;
   font-size: 25px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   transition: all 0.2s;
 }
@@ -1741,6 +2190,9 @@ a:hover {
 
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
@@ -1759,11 +2211,18 @@ a:hover:before {
 
 a span {
   color: transparent;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
 }
 
 a span:before {
   content: "B";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   color: black;
   transition: all 0.2s;
@@ -1802,13 +2261,22 @@ a:hover span:before {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
 
     <!-- FONT ِAWESOME -->
-    <link
+    <content
+      i.e
+      link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
       integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
@@ -1830,11 +2298,14 @@ a:hover span:before {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   margin: 0;
   display: flex;
   align-items: center;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   height: 100vh;
   font-family: sans-serif;
   background-color: #272727;
@@ -1848,7 +2319,13 @@ a {
   letter-spacing: 3px;
   border: 2px solid #00aeff;
   text-transform: uppercase;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
+  position: relative;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
   transition: all 0.5s;
 }
@@ -1857,7 +2334,9 @@ a:hover {
   color: white;
 }
 
-.wave {
+.
+  /* 🧒  Children property;waveof parent a-tag, which is set as relative {
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1874,6 +2353,9 @@ a:hover .wave {
 
 .wave:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: -22px;
   left: 0;
@@ -1920,7 +2402,14 @@ a:hover .wave {
     <title>CSS animations, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
@@ -1941,12 +2430,17 @@ a:hover .wave {
   box-sizing: border-box;
 }
 
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   font-family: sans-serif;
+  font-family: sans-serif;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
@@ -1959,12 +2453,20 @@ a {
   text-align: center;
   text-transform: capitalize;
   font-size: 25px;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   transition: all 0.2s;
+  transition: all 0.2s;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
-a span {
+a
+  /* 🧒  Children property; spanof parent a-tag, which is set as relative {
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1977,6 +2479,9 @@ a span {
 
 span:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   width: 8%;
   height: 500%;
@@ -2024,10 +2529,17 @@ a:hover {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
@@ -2041,11 +2553,14 @@ a:hover {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   margin: 0;
   display: flex;
+  /* horizontal */
   justify-content: center;
+  /* vertical */
   align-items: center;
   font-family: "Lato", sans-serif;
   background-color: #10ac84;
@@ -2055,6 +2570,10 @@ a {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   letter-spacing: 7px;
   padding: 18px 30px;
@@ -2065,6 +2584,9 @@ a {
 
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   height: 100%;
   width: 50%;
@@ -2084,6 +2606,9 @@ a:hover:before {
 
 a:after {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   height: 100%;
   width: 50%;
@@ -2128,13 +2653,21 @@ a:hover:after {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
+    <!-- 1️⃣ -->
     <a href="#">hover me</a>
   </body>
 </html>
@@ -2145,6 +2678,7 @@ a:hover:after {
 - In style.css
 
 ```css
+/* 2️⃣ use flex box and center the content i.e link, horizontally & Vertically*/
 body {
   height: 100vh;
   margin: 0;
@@ -2154,10 +2688,16 @@ body {
   font-family: "Lato", sans-serif;
   background-color: #10ac84;
   font-weight: bold;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
 }
 
-a {
+a
+  /* 🧒  Children property;of parent a-tag, which is set as relative {
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   text-decoration: none;
   text-transform: uppercase;
@@ -2171,6 +2711,9 @@ a {
 
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
@@ -2224,10 +2767,17 @@ a:active {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS animatin, transitions and transforms</title>
+    <title>CSS animation, transitions and transforms</title>
 
     <!-- OUR STYLESHEET -->
-    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <content
+      i.e
+      link
+      rel="stylesheet"
+      href="style.css"
+      type="text/css"
+      media="all"
+    />
   </head>
 
   <body>
@@ -2256,6 +2806,10 @@ body {
 
 a {
   text-decoration: none;
+
+  /* 🧒  Children property;  parent body-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   width: 250px;
   height: 80px;
@@ -2267,11 +2821,16 @@ a {
   letter-spacing: 3px;
   text-transform: uppercase;
   transition: all 0.5s;
+  transition: all 0.5s;
+  /* hiding the background i.e pseudo element outside the link */
   overflow: hidden;
 }
 
 a:before {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
@@ -2291,6 +2850,9 @@ a:hover:before {
 
 a:after {
   content: "";
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
@@ -2338,7 +2900,7 @@ a:hover {
 <html>
   <head>
     <title>Button Hover Effects</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <content i.e link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -2384,10 +2946,9 @@ body {
 .container {
   display: flex;
   gap: 150px;
-  flex-wrap: wrap;
-}
-
-a {
+  flex;-ap: wrapbody-tag*/
+  /* position:relative - position relative to it's normal position. */
+  /* top⬇️, bottom⬆️, left➡️, right⬅️ from container */
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -2405,6 +2966,10 @@ a:hover {
 }
 
 span {
+
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   background: #1e9bff;
   box-shadow: 0 0 10px #1e9bff, 0 0 20px #1e9bff, 0 0 30px #1e9bff, 0 0 50px
@@ -2481,6 +3046,10 @@ a:hover span:nth-child(4) {
 
 a:before {
   content: "";
+
+
+  /* 🧒  Children property; parent a-tag, which is set as relative */
+  /* position:absolute - relative to the closest parent with position:relative. */
   position: absolute;
   top: 0;
   left: 0;
