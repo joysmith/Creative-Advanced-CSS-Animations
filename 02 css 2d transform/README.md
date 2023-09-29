@@ -30,6 +30,30 @@
 
 ---
 
+<br>
+Que: What are CSS transform what they can do for us. How they are different from CSS transition?
+
+<br>
+
+**CSS transition** : the transition allow to deal with css properties applied to specific element, and make those properties change smoothly over a specific period of time
+
+like color, background-color, font-size, etc
+
+<br>
+
+**CSS transform** : control elements like div, images ..., changing element size, shape, position.
+
+The transform property has four function
+
+1. scale function
+1. translate function
+1. rotate function
+1. skew function
+
+<br>
+
+---
+
 - In index.html
 
 ```html
@@ -106,16 +130,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>Transition</title>
+
     <style type="text/css">
+      /* generic style */
       img {
         width: 300px;
         display: block;
+        /* make it center of page */
         margin: auto;
         margin-top: 200px;
+
+        /* 1️⃣ shorthand setup */
         transition: transform 2s;
       }
 
       img:hover {
+        /* 2️⃣ translate function take two args: X-axis, Y-axis */
+        /* move element from its original position */
         transform: translate(-500px, 200px);
       }
     </style>
@@ -162,15 +193,24 @@ transform: translate(10px, 10px)
     <meta charset="UTF-8" />
     <title>Transition</title>
     <style type="text/css">
+      /* generic style */
       img {
         width: 300px;
         display: block;
         margin: auto;
         margin-top: 200px;
+        /* 1️⃣ setup */
         transition: transform 2s;
       }
 
       img:hover {
+        /* 2️⃣ scale function takes two args */
+        /* change the size of element */
+        /* transform: scaleX(2); */
+        /* transform: scaleY(0.5); */
+        /* transform: scale(2, 2); */
+
+        /* short hand */
         transform: scale(2);
       }
     </style>
@@ -211,15 +251,32 @@ transform: translate(10px, 10px)
     <meta charset="UTF-8" />
     <title>Transition</title>
     <style type="text/css">
+      /* generic style */
       img {
         width: 300px;
         display: block;
         margin: auto;
         margin-top: 200px;
+
+        /* 1️⃣ setup */
         transition: transform 2s;
       }
 
       img:hover {
+        /* 2️⃣ rotate function takes one args in UNIT: degree, turn, gradian */
+        /* clockwise: deg */
+        /* transform: rotate(360deg); */
+
+        /* counter clock-wise:deg */
+        /* transform: rotate(-360deg); */
+
+        /* clock-wise: turn */
+        /* transform: rotate(1turn); */
+
+        /* counter clock-wise: turn */
+        /* transform: rotate(-1turn); */
+
+        /* clock-wise:grad */
         transform: rotate(200grad);
       }
     </style>
@@ -258,15 +315,28 @@ transform: translate(10px, 10px)
     <meta charset="UTF-8" />
     <title>Transition</title>
     <style type="text/css">
+      /* generic style */
       img {
         width: 300px;
         display: block;
         margin: auto;
         margin-top: 200px;
+
+        /* 1️⃣ setup */
         transition: transform 2s;
       }
 
       img:hover {
+        /* 2️⃣ skew function takes two args in degree */
+        /* skew horizontally */
+        /* transform: skewX(30deg); */
+        /* transform: skewX(-30deg); */
+
+        /* skew vertically */
+        /* transform: skewY(30deg); */
+        /* transform: skewY(-30deg); */
+
+        /* skew horizontally, Vertically at same time */
         transform: skew(20deg, 40deg);
       }
     </style>
@@ -307,22 +377,27 @@ CAT DEMO
     <meta charset="UTF-8" />
     <title>Transition</title>
     <style type="text/css">
+      /* generic style */
       img {
         width: 300px;
         display: block;
         margin: auto;
         margin-bottom: 70px;
         margin-top: 70px;
+        /* 1️⃣ setup */
         transition: transform 1s;
       }
 
       .second {
+        /* 2️⃣ change origin or pivot point */
         transform-origin: top left;
         margin-bottom: 0;
       }
 
+      /* 3️⃣ final state */
       .first:hover,
       .second:hover {
+        /* rotate 30deg clock-wise */
         transform: rotate(30deg);
       }
     </style>
@@ -353,6 +428,15 @@ KEYWORD DEMO
 
 ---
 
+| origin point                               | origin point                                     |
+| ------------------------------------------ | ------------------------------------------------ |
+| <img src="notes/1 top.png" width="400">    | <img src="notes/5 top right.png" width="400">    |
+| <img src="notes/2 right.png" width="400">  | <img src="notes/6 bottom right.png" width="400"> |
+| <img src="notes/3 bottom.png" width="400"> | <img src="notes/7 bottom left.png" width="400">  |
+| <img src="notes/4 left.png" width="400">   | <img src="notes/8 top left.png" width="400">     |
+
+---
+
 - In index.html
 
 ```html
@@ -365,6 +449,8 @@ KEYWORD DEMO
       href="https://fonts.googleapis.com/css?family=Roboto+Slab"
       rel="stylesheet"
     />
+
+    <!-- general style -->
     <style type="text/css">
       div {
         width: 150px;
@@ -378,41 +464,51 @@ KEYWORD DEMO
         font-family: "Roboto Slab", serif;
         text-align: center;
         line-height: 150px;
+        /* 1️⃣setup */
         transition: transform 1s;
       }
 
+      /* 3️⃣ final state */
       div:hover {
         transform: rotate(45deg);
       }
 
+      /* 2️⃣ change origin/pivot point top centre*/
       .top {
         transform-origin: top;
       }
 
+      /* 2️⃣ change origin/pivot point right centre*/
       .right {
         transform-origin: right;
       }
 
+      /* 2️⃣ change origin/pivot point */
       .left {
         transform-origin: left;
       }
 
+      /* 2️⃣ change origin/pivot point */
       .bottom {
         transform-origin: bottom;
       }
 
+      /* 2️⃣ change origin/pivot point */
       .top-right {
         transform-origin: top right;
       }
 
+      /* 2️⃣ change origin/pivot point */
       .top-left {
         transform-origin: top left;
       }
 
+      /* 2️⃣ change origin/pivot point */
       .bottom-right {
         transform-origin: bottom right;
       }
 
+      /* 2️⃣ change origin/pivot point */
       .bottom-left {
         transform-origin: bottom left;
       }
