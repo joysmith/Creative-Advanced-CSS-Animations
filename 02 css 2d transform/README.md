@@ -430,10 +430,10 @@ KEYWORD DEMO
 
 | origin point                               | origin point                                     |
 | ------------------------------------------ | ------------------------------------------------ |
-| <img src="notes/1 top.png" width="400">    | <img src="notes/5 top right.png" width="400">    |
-| <img src="notes/2 right.png" width="400">  | <img src="notes/6 bottom right.png" width="400"> |
-| <img src="notes/3 bottom.png" width="400"> | <img src="notes/7 bottom left.png" width="400">  |
-| <img src="notes/4 left.png" width="400">   | <img src="notes/8 top left.png" width="400">     |
+| <img src="notes/1 top.png" width="200">    | <img src="notes/5 top right.png" width="200">    |
+| <img src="notes/2 right.png" width="200">  | <img src="notes/6 bottom right.png" width="200"> |
+| <img src="notes/3 bottom.png" width="200"> | <img src="notes/7 bottom left.png" width="200">  |
+| <img src="notes/4 left.png" width="200">   | <img src="notes/8 top left.png" width="200">     |
 
 ---
 
