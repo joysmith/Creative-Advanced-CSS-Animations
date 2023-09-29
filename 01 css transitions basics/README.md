@@ -234,6 +234,12 @@ We are saying to the browser, when I hover over any div, I want it to move 900px
 
 ---
 
+What is transition delay
+
+<img src="notes/transition delay.png" >
+
+<br>
+
 - In index.html
 
 ```html

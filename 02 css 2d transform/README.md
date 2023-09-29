@@ -8,7 +8,11 @@
 
 #### 10.[ CSS skew function](#10)
 
-#### 11.[ transform origin](#11)
+#### 11.[ transform origin- CAT DEMO](#11a)
+
+#### 11.[ transform origin- KEYWORD DEMO](#11b)
+
+#### 11.[ transform origin- X & Y OFFSETS](#11c)
 
 ---
 
@@ -350,7 +354,7 @@ transform: translate(10px, 10px)
 
 <br>
 
-### 11. transform origin<a id="11"></a>
+### 11. transform origin- CAT DEMO<a id="11a"></a>
 
 > **_Business Objective: Layout_**
 
@@ -410,13 +414,13 @@ CAT DEMO
 </html>
 ```
 
----
+<br>
+
+### 11. transform origin- KEYWORD DEMO<a id="11b"></a>
 
 > **_Business Objective: Layout_**
 
 <img src="notes/11b.gif">
-
-KEYWORD DEMO
 
 | Technology    | Description     |
 | ------------- | --------------- |
@@ -528,13 +532,15 @@ KEYWORD DEMO
 </html>
 ```
 
----
+<be>
+
+### 11. transform origin- X & Y OFFSETS<a id="11c"></a>
 
 > **_Business Objective: Layout_**
 
-X & Y OFFSETS
-
 <img src="notes/11c.gif">
+<img src="notes/offset percentage.png">
+<img src="notes/xy offset center origin.png">
 
 | Technology    | Description     |
 | ------------- | --------------- |
@@ -558,6 +564,7 @@ X & Y OFFSETS
       href="https://fonts.googleapis.com/css?family=Roboto+Slab"
       rel="stylesheet"
     />
+    <!-- generic style -->
     <style type="text/css">
       div {
         width: 600px;
@@ -572,7 +579,14 @@ X & Y OFFSETS
         font-family: "Roboto Slab", serif;
         text-align: center;
         line-height: 300px;
+
+        /* 1️⃣ setup */
         transition: transform 1s;
+        /* 2️⃣ change element origin using XY-offset */
+        /* unit: percentage */
+        /* transform-origin: 30% 80%; */
+
+        /* unit: pixel; set half of width, set half of height*/
         transform-origin: 300px 150;
       }
 
